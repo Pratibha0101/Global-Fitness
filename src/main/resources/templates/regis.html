@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="Stylesheet" href="../RegistrationPage/style.css">
+  <script>
+    //function test() {
+     //var myname = document.getElementById("name").value;
+      //localStorage.setItem("username", myname)
+    //}
+  </script>
+  <style>
+    body {
+      background-image: url("./regi-imgs/registerpagebg.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    label{
+      margin-top: 10px;
+    }
+
+    .fullb {
+      font-size: 20px;
+      top: 0;
+      right: 10;
+      margin: 0px 90px 0px 0px;
+
+      background-image: url('/resources/images/registerpageimage.png');
+    }
+
+    .registration {
+      justify-content: space-between;
+      align-items: center;
+      margin: 10px 0px 0px 0px;
+      
+    }
+
+    table {
+      width: 50%
+    }
+
+    h2 {
+      border-radius: 3px;
+    }
+
+    .name {
+      background-color: skyblue;
+      margin-right: 12px;
+    }
+
+    .DOB {
+      background-color: burlywood;
+      margin-right: 12px;
+    }
+
+    .Email {
+      background-color: rgb(194, 239, 127);
+      margin-right: 12px;
+    }
+
+    .MedicalCondition {
+      margin-right: 12px;
+      background-color: pink;
+    }
+
+    .Contacts {
+      background-color: rgb(196, 152, 238);
+      margin-right: 12px;
+    }
+
+    .Gender {
+      background-color: rgb(130, 232, 213);
+      margin-right: 12px;
+    }
+
+    .Weight {
+      background-color: rgb(247, 132, 155);
+      margin-right: 12px;
+    }
+
+    .Height {
+      background-color: rgb(126, 141, 241);
+      margin-right: 12px;
+    }
+  </style>
+</head>
+
+<body style="background-color: grey;">
+  <div class="fullb">
+    <div class="forms">
+      <form th:action="@{/regimem}" action="#" onsubmit="return conPass()" method="post">
+        <center>
+          <h2>Registration</h2>
+        </center>
+        <center>
+          <div class="registration">
+
+            <h3>Personal Information</h3>
+            <hr>
+            <label for="name">Name:</label> <br>
+            <input type="text" id="Name" style="margin-bottom: 20px;" placeholder="Name" name="Name" required><br>
+
+            <label for="email">Email:</label> <br>
+            <input type="email" id="Email" style="margin-bottom: 20px;" placeholder="Email" name="Email" required><br>
+
+            <label for="phone">Phone Number:</label> <br>
+            <input type="tel" id="Contact" style="margin-bottom: 20px;" placeholder="10 digit phone no." name="Contact" pattern="[0-9]{10}" required><br>
+            
+            <label for="password">Password:</label> <br>
+            <input type="password" id="Password" style="margin-bottom: 20px;" placeholder="Password" name="Password" required><br>
+            
+            <label for="confirmPassword" style="margin-top: 20px;">Confirm Password:</label> <br>
+            <input type="password" id="cPassword" style="margin-bottom: 20px;" placeholder="confirm password" name="confirmPassword" required><br>
+
+            <input type="checkbox" id="showPassword" name="showPassword" th:checked="${showPassword}"> Show Password
+
+          </div>
+        </center>
+        <br><br>
+        <div>
+          <center><button style="height: 30px; background-color: chartreuse;" type="submit">Click here to
+              Submit</button></center>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+
+function conPass() {
+        const password = document.getElementById('Password').value;
+        const confirmPassword = document.getElementById('cPassword').value;
+
+        // comparing both passwords if they match
+        if (password === confirmPassword) {
+          return true;            
+        }
+        else{
+        alert("Incorrect Password, please enter similar password!");
+        return false 
+      }
+    }
+
+   document.addEventListener("DOMContentLoaded", function () {
+            let pass = document.getElementById("Password");
+            let check = document.getElementById("showPassword");
+            let checkp = document.getElementById("cPassword");
+           
+            check.onclick = showPass;
+
+            function showPass() {
+                if (check.checked) {
+                    pass.type = "text";
+                    checkp.type= "text";
+                } else {
+                    pass.type = "password";
+                    checkp.type= "password";
+                }
+            }
+        });
+ 
+
+</script>
+</body>
+
+</html>

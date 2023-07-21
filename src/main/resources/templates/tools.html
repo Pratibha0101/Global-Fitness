@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../toolspage/style.css">
+<style>
+  body{
+  margin: 0%;
+  padding: 0%;
+  font-family: calibri, arial;
+  font-size: 18px;
+}
+header{
+    margin-left: 0px;
+   position: fixed;
+   top: 0;
+    background-color: rgb(26, 24, 91);
+    width: 100%;
+    text-align: center;
+    font-size: 60px;
+    font-family: 'Times New Roman', Times, serif;
+    color: bisque;
+   
+}
+h1{
+  text-align: center;
+  margin: 50px 0px 0px 0px;
+  padding-top: 100px;
+}
+h2{
+  margin: 0%;
+  padding: 0%;
+}
+
+.content1{
+  text-align: center;
+  font-size: 30px;
+  font-family: Cambria;
+}
+
+
+ul {
+  text-align: center;
+  margin-top: 30px;
+}
+ul li {
+  display: inline-block;
+  margin-right: 15px;
+  transition: all 0.3s ease-in-out;
+}
+ul li:hover .submenu {
+  height: 85px;
+}
+ul li:hover a {
+  color: #3862a0;
+}
+ul li:hover a::before {
+  visibility: visible;
+  transform: scale(1, 1);
+}
+ul li .submenu {
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background-color: #3862a0;
+  height: 0;
+  line-height: 40px;
+  box-sizing: border-box;
+  transition: height 0.3s ease-in-out;
+  transition-delay: 0.1s;
+}
+ul li .submenu a {
+  color: #fff;
+  margin-top: 20px;
+  font-size: 16px;
+}
+ul li .submenu a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+ul li a {
+  color: #999;
+  display: block;
+  padding: 0 7px 0 7px;
+  margin: 0 0 10px;
+  text-decoration: none;
+  position: relative;
+}
+ul li a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: -10px;
+  left: 0px;
+  background-color: #3862a0;
+  transition: all 0.2s ease-in-out;
+  transform: scale(0, 0);
+  visibility: hidden;
+}
+
+button {
+  position: relative;
+  background: transparent;
+  box-sizing: border-box;
+  border-radius: 0.6rem;
+  align-self: center;
+  font-size: 17px;
+  font-weight: 400;
+  margin: 20px;
+  padding: 20px 40px;
+  text-align: center;
+  color: aliceblue;
+  font-family: Pangolin;
+  font-weight: bold;
+  cursor: pointer;
+  top: 50%;
+  text-transform: uppercase;
+}
+
+.buttonBox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1000px;
+ 
+}
+
+.button4 {
+  border: 2px solid aqua;
+}
+
+.button4:hover {
+  color: aqua;
+  box-shadow: 0 0 5px #03e9f4,
+      0 0 25px #03e9f4,
+      0 0 50px #03e9f4,
+      0 0 100px #03e9f4;
+}
+.bmi-content2{
+  margin-left: 10px;
+}
+
+/*styling for BMI calculator starts*/
+
+.bmi-part2{
+  display: flex;
+  column-gap: 20px;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  width: 80%;
+  background-color: #e0e0e0;
+}
+
+.bmi-calculator {
+  border-radius: 8px;
+  background-color: #e0e0e0;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 5px 5px 10px #c1c1c1,
+    -5px -5px 10px #ffffff;
+}
+
+.input {
+  margin: 10px 0;
+}
+
+.input input {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  height: 20px;
+}
+
+.input input:focus {
+  outline: none;
+}
+
+.calculate {
+  position: static;
+  display: block;
+  margin: 0 auto;
+  padding: 10px;
+  border: none;
+  border-radius: 2px;
+  background-color: #e4c495;
+  width: 100%;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 5px 5px 10px #c1c1c1,
+    -5px -5px 10px #ffffff;
+}
+
+.Underweight {
+  background-color:  rgb(108, 163, 235);
+}
+
+.Normal {
+  background-color:  rgb(87, 190, 111);
+}
+
+.Overweight {
+  background-color:  rgb(244, 244, 107);
+}
+
+.Obese {
+  background-color: rgb(244, 166, 21);
+}
+
+.severely-obese{
+  background-color: rgb(246, 59, 59);
+}
+
+/*styling for BMI calculator ends*/
+
+/*styling for BMR calculator starts*/
+
+
+</style>
+</head>
+
+<body>
+  <header>
+    <div>FITNESS CALCULATORS</div>
+    <nav>
+      <ul>
+        <li>
+          <div class="buttonBox">
+            <button class="button4"><a href="#">Choose Calculator</a></button>
+          </div>
+          <ul class="submenu">
+            <li><a href="#bmi-cont"><img src="./tools-imgs/bmi-logo.jpg" alt="" style="height: 50px;">BMI</a></li>
+            <li><a href="#"><img src="./tools-imgs/bmr-logo.jpg" alt="" style="height: 50px;">BMR</a></li>
+            <li><a href="#"><img src="./tools-imgs/calorie-logo.jpg" alt="" style="height: 50px;">Calorie</a></li>
+            <li><a href="#"><img src="./tools-imgs/tdee-logo.jpg" alt="" style="height: 50px;">TDEE</a></li>
+          </ul>
+        </li>
+
+      </ul>
+    </nav>
+  </header>
+  <section class="content1" style="margin-top: 200px;">
+    <h1>FITNESS CALCULATORS</h1>
+    <p1 style="margin-top: 30px;">The fitness calculators help make your life easy!
+      <br>
+      Whether you want to calculate BMI, use the calorie calculator, workout your BMR using our BMR calculator,
+      <br>
+      or even figure out how much you should be lifting with our 1 rep max calculator?
+      <br> The fitness calculators have the
+      answer.
+      <br>
+      At Global Fitness, it's not just all about your virtual gym membership, we want to help you improve in all aspects
+      of your life, both inside and outside of the gym!
+      <br>
+      <br>
+      Find and click on the relevant fitness calculator above,
+      <br>enter your details and start using our fitness calculators to put your fitness first TODAY!
+    </p1>
+  </section>
+  <hr>
+  <section class="bmi-content"  id="bmi-cont" style="padding-top: 300px;">
+    <h1 style="padding-top: 0%; margin-top: 0%;">BMI Calculator</h1>
+    <h2>How Can You Calculate Your BMI?</h2>
+    <p>the body mass index (BMI) is a measure that uses your height and weight to work out if you are a healthy size and
+      calculate your BMI measurement.
+
+      <br>
+      Your BMI is found by dividing an adult's weight in kilograms by their height in metres squared. The resulting
+      number- usually between about 15-40 shows whether that person is underweight, a healthy weight, overweight or
+      obese.
+      <br>
+      For those aged 2 to 18, the BMI calculation doesn't just take into account their height and weight. Their age and
+      gender are incorporated into the equation as well.
+    </p>
+    <br>
+    <h2>BMI Ranges</h2>
+    <section class="bmi-part2">
+    <div class="bmi-content2">
+    <p>A healthy BMI is in the 18.5 to 24.9 range for the majority of adults. This is definitely the case in individuals
+      with a normal musculature. <br>
+      <div class="bmi-status" style="width: 40%;"> The ranges measure in at:
+        <div class="Underweight" style="background-color: rgb(108, 163, 235);">below 18.5: underweight </div>
+        <div class="Normal" style="background-color: rgb(87, 190, 111);">between 18.5 and 24.9: healthy weight</div>
+        <div class="Overweight" style="background-color: rgb(244, 244, 107);">between 25 and 29.9: overweight</div>
+        <div class="Obese" style="background-color: rgb(244, 166, 21);">between 30 and 39.9: obese</div>
+        <div class="severely-Obese" style="background-color: rgb(246, 59, 59);">over 40: severely obese</div>
+      </div>
+    </p>
+  </div>
+  <div class="container">
+    <div class="bmi-calculator">
+      <div class="input">
+        <label for="height">Height (cm):</label>
+        <input type="text" id="height" placeholder="Height in cm">
+      </div>
+      <div class="input">
+        <label for="weight">Weight (kg):</label>
+        <input type="text" id="weight" placeholder="Weight in kg">
+      </div>
+      <button type="submit" class="calculate">Check BMI</button>
+      <div class="result"></div>
+    </div>
+  </div>
+  </div>
+</section>
+  </section>
+  <hr>
+  <section class="bmr-content">
+    <h1>BMR Calculator</h1>
+    <h2>What Is Basal Metabolic Rate (BMR)?</h2>
+    <p1 style="margin-top: 30px;">Your body burns through calories even at rest. Basic human functions like breathing, repairing muscle tissue, cell regeneration and renewal and the processing of nutrients uses a tremendous amount of energy.
+Your BMR is the number of calories that your body needs in order to fulfil all of these functions.
+As you age, your BMR will fall and so will your TDEE. You can calculate your TDEE using our TDEE Calculator here.
+Note that BMR is different from RMR, which you can find out more about and calculate using our RMR Calculator.
+    </p1>
+    <br>
+    <br>
+    <h2>CALCULATING YOUR BMR</h2>
+    <p1 style="margin-top: 30px;">
+      It's easy enough to find a rough estimate of your BMR. Though actual amounts will vary according to person - there are too many variables to take into account to be 100% accurate all the time - a simple BMR calculator will be able to put you in the right ballpark.
+Alternatively, you can do it yourself using a simple enough equation. This is called the Harris-Benedict equation, and it goes like this:
+For women: BMR = 655 + (9.6 × weight in kg) + (1.8 × height in cm) – (4.7 × age in years)
+For men: BMR = 66 + (13.7 × weight in kg) + (5 × height in cm) – (6.8 × age in years)
+    </p1>
+  </section>
+
+
+
+
+
+
+
+
+
+<script>
+  //SCRIPT FOR RESULT OF BMI CALCULATOR starts
+  // select the calculate button
+  var calculate = document.querySelector('.calculate');
+
+  // attach event listener to the button
+  calculate.addEventListener('click', findBMI);
+
+  // function to find the BMI
+  function findBMI() {
+    var height = +document.querySelector('#height').value;
+    var weight = +document.querySelector('#weight').value;
+    // check height & weight are a valid number
+    if (height <= 0 || weight <= 0 || isNaN(height) || isNaN(weight)) {
+      alert('Please fill all fields with valid numbers');
+      return;
+    }
+    // convert height to meters
+    height = height / 100;
+    var bmi = weight / (height * height);
+    showResult(bmi);
+  }
+
+  // function to show the result
+  function showResult(bmi) {
+    var result = document.querySelector('.result');
+    var bmiStatus;
+    if (bmi < 18.5) {
+      bmiStatus = 'Underweight';
+    } else if (bmi < 25) {
+      bmiStatus = 'Normal';
+    } else if (bmi < 30) {
+      bmiStatus = 'Overweight';
+    } else if(bmi < 40){
+      bmiStatus = 'Obese';
+    } else{
+      bmiStatus = 'severely-obese'
+    }
+    result.innerHTML = `<div class=${bmiStatus}>Your BMI is ${bmi.toFixed(2)} and you are ${bmiStatus}.</div>`;
+  }
+  //SCRIPT FOR RESULT OF BMI ends
+</script>
+
+
+
+</body>
+
+</html>

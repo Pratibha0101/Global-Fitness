@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="Stylesheet" href="../loginpage/style.css">
+  <script>
+    function tested() {
+      var mynames = document.getElementById("name01").value;
+      localStorage.setItem("username01", mynames)
+    } 
+  </script>
+</head>
+<br>
+
+<body style="background-color: darkturquoise;">
+  <div class="forms"
+    style="border-radius: 5px; border-color: darkslateblue; background-color: dodgerblue; margin-left: 200px; margin-right: 200px;">
+    <center>
+      <form action="/login" method="post">
+        <h2>Our Login Page</h2>
+
+        <div class="forms">
+          <h3>Login</h3>
+          <table>
+
+            <section class="name01"> 
+              <label for="name"><strong>Registered Name</strong></label> <br>
+            </section>
+            <input type="text" name="Name" id="Name">
+            </section>
+
+            <section class="password">
+              <label for="password"><strong>Password</strong></label> <br>
+              <input type="password" name="Password" id="Password">
+
+            </section>
+
+          </table>
+          <br>
+          <br>
+          <input type="submit" style="color: blue" value="Login">
+          
+      </form>
+      <div th:if="${errorMessage}">
+        <p th:text="${errorMessage}" style="color: red;"></p>
+    </div>
+    </center>
+    <br>
+    <center>
+      <p1>New Member? Register Now</p1>
+    </center>
+    <center><button class="button" type="button"><a href="/registration">Click to
+          Register</a></button></center>
+  </div>
+  </div>
+
+
+
+
+
+  <script>
+
+  </script>
+
+</body>
+
+</html>

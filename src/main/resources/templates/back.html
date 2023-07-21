@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Back-Page</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        html{
+    padding: 0%;
+    margin: 0%;
+    font-family: Arial;
+}
+
+/* body{
+   
+} */
+
+header{
+    color: rgb(18, 248, 175);
+   font-size: 50px;
+}
+ .top{
+    height: 50rem;
+    background-image: url('./back-imgs/back-bgimg.jpg');
+   background-repeat: no-repeat;
+   background-size: cover;
+
+ }
+
+.summary{
+    font-size: 15px;
+    background-image: url('./back-imgs/backbg2.jpg');
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+
+/*For nav bar*/
+
+.navv{
+    -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    background-color: rgb(244, 188, 120);
+  }
+  ul li {
+    list-style: none;
+  }
+  ul li a {
+    position: relative;
+    display: block;
+    text-transform: uppercase;
+    margin: 20px 0;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #c4e61a;
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    transition: 0.5s;
+    z-index: 1;
+  }
+  ul li a:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-top: 2px solid #262626;
+    border-bottom: 2px solid #262626;
+    transform: scaleY(2);
+    opacity: 0;
+    transition: 0.3s;
+  }
+  ul li a:after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #262626;
+    transform: scale(0);
+    opacity: 0;
+    transition: 0.3s;
+    z-index: -1;
+  }
+  ul li a:hover {
+    color: #fff;
+  }
+  ul li a:hover:before {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+  ul li a:hover:after {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+
+
+    </style>
+</head>
+
+<body>
+    <section class="top" id="t">
+    <header>
+        <b>ARE YOU READY TO TRAIN YOUR BACK?
+            <br>
+            Choose Your Variation and LET SET GO!
+            <!--<p id="tem"></p> -->
+            <!-- <script>
+                document.getElementById("tem").innerHTML = localStorage.getItem("username")
+            </script> -->
+        </b>
+    </header>
+    <br>
+    <section class="summary">
+        When you crack your exercise toolkit open each week on back day,
+        you've got a seemingly endless array of movements available.
+        <br>
+        If you're overwhelmed by the sheer number of row variations, or you draw a total blank when thinking of new
+        exercises to try,
+        <br>
+        consider this list your new back blueprint.
+        <br>
+        <br>
+        Here are the best back exercises for muscle growth,
+        plus three complete back workouts incorporating the movements that you can plug into your split right away.
+    </section>
+    <br>
+    <br>
+    
+    <div>
+        <!-- <ul class="ContentJumpLinks-list">
+            <li class="line1"><a href="../deadlift/index.html" style="color: black;"> DEADLIFT </a></li>
+            <li class="line2"><a href="#" style="color: black;"> BENT-OVER-ROW </a></li>
+            <li class="line3"><a href="#" style="color: black;">PULL-UP</a></li>
+            <li class="line4"><a href="#" style="color: black;">T-BAR-ROW</a></li>
+            <li class="line5"><a href="#" style="color: black;">SEATED-ROW</a></li>
+            <li class="line6"><a href="../latpulldown/latpull.html" style="color: black;">LAT-PULL-DOWN</a></li>
+
+        </ul> -->
+    </div>
+    <div class="navv">
+        <ul>
+            <li><a href="#dd">DEADLIFT</a></li>
+            <li><a href="#pu">PULL UP</a></li>
+            <li><a href="#idr">INCLINE DUBBELL ROW</a></li>
+            <li><a href="#be">BACK EXTENSION</a></li>
+            <li><a href="#scr">SEATED CABLE ROW</a></li>
+          </ul>
+    </div>
+    </section>
+    <Section>
+        <h1 id="dd">DEADLIFT</h1>
+        <img src="/images/deadliftgif.gif" alt="">
+        <p>Stand with feet hip-width apart and bend your hips back. Your grip should be just outside of your knees.
+            Keeping a flat black, extend your hips to stand up, and pull the bar up along your body until lock-out, as
+            your hips drive through and your shoulders move back. While pulling, keep your eyes on the ground a few feet
+            in front of you. Carefully lower the bar back to the starting position.</p> <a href="#t">to the top</a>
+    </Section>
+    <Section>
+        <h1 id="pu">PULL UP</h1>
+        <img src="/images/pull-up.gif" alt="" height="500px">
+        <p>Attach a weighted belt to your waist, hold a dumbbell between your feet, or—if you can’t complete your reps
+            with weight—use body weight alone. Hang from a pullup bar with your hands just outside shoulder width. Pull
+            yourself up until your chin is over the bar</p> <a href="#t">to the top</a>
+    </Section>
+    <Section>
+        <h1 id="idr">INCLINE DUMBBELL ROW</h1>
+        <img src="/images/Incline-Dumbbell-Row.gif" alt="">
+        <p>Set an adjustable bench to a 30- to 45-degree incline and lie on it chest-down. Grasp a dumbbell in each hand
+            and draw your shoulder blades back and together as you row the weights to your sides.</p> <a href="#t">to the top</a>
+    </Section>
+    <Section>
+        <h1 id="be">BACK EXTENSION</h1>
+        <img src="/images/weighted-hyperextension.gif" alt="" height="500px">
+        <p>Lock your legs into a back extension bench and allow your torso to bend forward so that your hips are bent
+            almost 90 degrees. Extend your hips so that your body forms a straight line.</p> <a href="#t">to the top</a>
+    </Section>
+    <Section>
+        <h1 id="scr">SEATED CABLE ROW</h1>
+        <img src="/images/Seated-Cable-Rope-Row.gif" alt="">
+        <p>Attach a straight or lat-pulldown bar to the pulley of a seated row station. Sit on the bench (or floor) with
+            your feet against the foot plate and knees slightly bent. Keeping your lower back flat, bend forward at the
+            hips to grasp the bar and row it to your sternum, squeezing your shoulder blades together in the end
+            position. Extend your arms and feel the stretch in your backbefore beginning the next rep.</p> <a href="#t">to the top</a>
+    </Section>
+</body>
+
+</html>

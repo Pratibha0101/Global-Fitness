@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legs-Page</title>
+    <style>
+        html {
+            padding: 0%;
+            margin: 0%;
+            font-family: Arial;
+        }
+
+        /* body{
+   
+} */
+        header {
+            color: rgb(18, 248, 175);
+            font-size: 50px;
+        }
+
+        .top {
+            height: 50rem;
+            background-image: url('./back-imgs/back-bgimg.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+
+        .summary {
+            font-size: 15px;
+            background-image: url('./back-imgs/backbg2.jpg');
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+        }
+
+
+        /*For nav bar*/
+
+        .navv {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            background-color: rgb(244, 188, 120);
+        }
+
+        ul li {
+            list-style: none;
+        }
+
+        ul li a {
+            position: relative;
+            display: block;
+            text-transform: uppercase;
+            margin: 20px 0;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #c4e61a;
+            font-family: sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            transition: 0.5s;
+            z-index: 1;
+        }
+
+        ul li a:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-top: 2px solid #262626;
+            border-bottom: 2px solid #262626;
+            transform: scaleY(2);
+            opacity: 0;
+            transition: 0.3s;
+        }
+
+        ul li a:after {
+            content: "";
+            position: absolute;
+            top: 2px;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #262626;
+            transform: scale(0);
+            opacity: 0;
+            transition: 0.3s;
+            z-index: -1;
+        }
+
+        ul li a:hover {
+            color: #fff;
+        }
+
+        ul li a:hover:before {
+            transform: scaleY(1);
+            opacity: 1;
+        }
+
+        ul li a:hover:after {
+            transform: scaleY(1);
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="top" id="t">
+        <header>
+            <b>ARE YOU READY TO TRAIN YOUR CHEST?
+                <br>
+                Choose Your Variation and LET SET GO!
+                <!--<p id="tem"></p> -->
+                <!-- <script>
+                    document.getElementById("tem").innerHTML = localStorage.getItem("username")
+                </script> -->
+            </b>
+        </header>
+        <br>
+        <section class="summary">
+            Big biceps signal to the world that you’ve put in some serious sweat equity at the gym. <br> The biceps are
+            small
+            muscles, but growing them takes time, knowledge, and intelligent programming. <br> Big biceps don’t just
+            look
+            good — they serve a real function. The next time you pick up your kid or perform a perfect pull-up, that’s
+            your biceps at work. <br>
+            <br>
+            The good news for you is training the biceps is pretty simple — you curl, curl, and curl some more. And
+            certain exercises get the job done better than others. <br>
+        </section>
+        <br>
+        <br>
+
+        <div>
+            <!-- <ul class="ContentJumpLinks-list">
+                <li class="line1"><a href="../deadlift/index.html" style="color: black;"> DEADLIFT </a></li>
+                <li class="line2"><a href="#" style="color: black;"> BENT-OVER-ROW </a></li>
+                <li class="line3"><a href="#" style="color: black;">PULL-UP</a></li>
+                <li class="line4"><a href="#" style="color: black;">T-BAR-ROW</a></li>
+                <li class="line5"><a href="#" style="color: black;">SEATED-ROW</a></li>
+                <li class="line6"><a href="../latpulldown/latpull.html" style="color: black;">LAT-PULL-DOWN</a></li>
+    
+            </ul> -->
+        </div>
+        <div class="navv">
+            <ul>
+                <li><a href="#dd">SQUATS</a></li>
+                <li><a href="#pu">Bulgerian Split Squats</a></li>
+                <li><a href="#idr">Leg Press</a></li>
+                <li><a href="#be">Leg Extensions</a></li>
+                <li><a href="#scr">Seated Leg Curl</a></li>
+
+            </ul>
+        </div>
+    </section>
+    <Section>
+        <h1 id="dd">SQUATS</h1>
+        <img src="/images/barbell-full-squat.gif" alt="" height="500px">
+        <p>Set a barbell in a power rack to shoulder height, loaded with an appropriate amount of weight. <br>
+            Get under the barbell, set the bar across your upper traps, or set the bar across your shoulder blades if
+            you’re
+            performing low-bar squats. <br>
+            <br>
+            Brace your core and lift the weight out of the rack. Take small steps back one foot at a time to get
+            yourself into position. With your chest up, squat down until the bottoms of your thighs are parallel to the
+            floor. Now, drive back up by pushing your feet through the floor.
+            <br>
+            Your squat stance and technique is highly individual. Take time to work out your most
+            comfortable and sustainable posture.
+        </p> <a href="#t">to the top</a>
+    </Section>
+    <Section>
+        <h1 id="pu">Bulgerian Split Squats</h1>
+        <img src="/images/bulgarian-split-squat.gif" alt="" height="500px">
+        <p>Hold a dumbbell in each hand and stand about a foot in front of a bench. Place one foot, laces down, on a
+            bench. Brace your core and squat down until both of your legs bend to 90 degrees. <br>
+            You can squat down a little further, but don’t let your knee touch the floor. <br>
+            Hold this down position for a beat and then drive back up. <br>
+            <br>
+            The closer your working foot is relative to the bench, the more emphasis you’ll place on your quads via
+            forward knee travel.
+        </p> <a href="#t">to the top</a>
+    </Section>
+    <Section>
+        <h1 id="idr">Leg Press</h1>
+        <img src="/images/leg-press.gif" alt="" height="500px">
+        <p>Sit in the leg press seat, and place your feet in the middle of the sled, about shoulder-width apart. <br>
+            Press the sled out of the rack, lower the safety bars, and then slowly lower the sled towards your chest
+            until your thighs break 90 degrees. <br>
+            Press the sled back up but do not lock out your knees. If your lower back or hips lift off the seat as you
+            drive the weight back up, you’re going too far down.
+            <br>
+            Try a slightly wider foot placement to avoid having your thighs collide with your torso.
+        </p> <a href="#t">to
+            the top</a>
+    </Section>
+    <Section>
+        <h1 id="be">Leg Extensions</h1>
+        <img src="/images/single-leg-leg-extension.gif" alt="" height="500px">
+        <p>Adjust the back pad on the machine and line your knee up with the axis of rotation (signified by a dot or
+            marker on the machine) and adjust the ankle pad, so it rests on your shoelaces to touch just above the shoe.
+            <br>
+            Extend the knee to move the ankle pad, then accelerate into the rep until you reach the end range of the
+            knee extension. <br> Ensure your ankle is in dorsiflexion — toes pointed straight ahead or slightly up. <br>
+            Lower
+            weight back down with control.
+            <br>
+            Grab onto the handles of the seat and actively try to pull your butt into the pad the entire
+            time.
+        </p> <a href="#t">to the top</a>
+    </Section>
+    <Section>
+        <h1 id="scr">Seated Leg Curl</h1>
+        <img src="/images/seated-leg-curl.gif" alt="" height="500px">
+        <p>Adjust the back pad on the machine and line your knee up with the axis of rotation (signified by a dot or
+            marker on the machine). <br> Adjust the thigh pad to touch just above the knee. <br> The lower leg pad
+            should be just
+            above the shoe on the back of the leg. <br>
+            Start the movement by flexing at the knee. Continue the repetition until you reach the end position. <br> Ensure
+            your ankle is in dorsiflexion — toes pointed straight ahead or slightly up. <br> Control the weight as you return
+            to the starting position.
+<br>
+            Really emphasize the eccentric portion here so you can feel your hamstrings stretching out.
+        </p> <a href="#t">to the top</a>
+    </Section>
+</body>
+
+</html>

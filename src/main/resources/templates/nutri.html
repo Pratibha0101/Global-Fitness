@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrition</title>
+    <style>
+        body{
+            background-color: rgb(230, 245, 59);
+        }
+        .fb {
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            min-height: 120vh;
+            margin: 0;
+            background-color: #f2f490;
+            background-image: url("../static/images/nutriGif.gif");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 20px;
+            max-width: 900px;
+        }
+
+        .card {
+            background-color: #96f4e7;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            
+        }
+
+        .card-buttons {
+            margin-top: 10px;
+        }
+
+.card:hover{
+            background-color: rgb(21, 179, 241);
+        }
+
+        /* Responsive styles */
+        @media (max-width: 400px) {
+            /* For screens smaller than or equal to 400px */
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (min-width: 401px) and (max-width: 700px) {
+            /* For screens between 401px and 700px */
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr);
+                
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="fb">
+    <center><h1 style="background-color: coral;">Healthy Nutrition Plans</h1></center> <br>
+    <div class="grid-container">
+        <div class="card">
+            <h2>The Mediterranean diet</h2>
+            <p>Card content goes here.</p>
+            <div class="card-buttons">
+                <button style="font-family: Comic Sans MS;">VIEW</button>
+                <button style="font-family: Comic Sans MS;">SUBSCRIBE</button>
+            </div>
+        </div>
+        <div class="card">
+            <h2>The DASH diet</h2>
+            <p>Card content goes here.</p>
+            <div class="card-buttons">
+                <button style="font-family: Comic Sans MS;">VIEW</button>
+                <button style="font-family: Comic Sans MS;">SUBSCRIBE</button>
+            </div>
+        </div>
+        <div class="card">
+            <h2>Plant-based and flexitarian diets</h2>
+            <p>Card content goes here.</p>
+            <div class="card-buttons">
+                <button style="font-family: Comic Sans MS;">VIEW</button>
+                <button style="font-family: Comic Sans MS;">SUBSCRIBE</button>
+            </div>
+        </div>
+        <div class="card">
+            <h2>The MIND diet</h2>
+            <p>Card content goes here.</p>
+            <div class="card-buttons">
+                <button style="font-family: Comic Sans MS;">VIEW</button>
+                <button style="font-family: Comic Sans MS;">SUBSCRIBE</button>
+            </div>
+        </div>
+        <div class="card">
+            <h2>WW (formerly Weight Watchers)</h2>
+            <p>Card content goes here.</p>
+            <div class="card-buttons">
+                <button style="font-family: Comic Sans MS;">VIEW</button>
+                <button style="font-family: Comic Sans MS;">SUBSCRIBE</button>
+            </div>
+        </div>
+        <div class="card">
+            <h2>Intermittent fasting</h2>
+            <p>Card content goes here.</p>
+            <div class="card-buttons">
+                <button style="font-family: Comic Sans MS;">VIEW</button>
+                <button style="font-family: Comic Sans MS;">SUBSCRIBE</button>
+            </div>
+        </div>
+        <div class="card">
+            <h2>The Volumetrics diet</h2>
+            <p>Card content goes here.</p>
+            <div class="card-buttons">
+                <button style="font-family: Comic Sans MS;"><a href="">VIEW</a></button>
+                <button style="font-family: Comic Sans MS;">SUBSCRIBE</button>
+            </div>
+        </div>
+        <div class="card">
+            <h2>The Mayo Clinic Diet</h2>
+            <p>Card content goes here.</p>
+            <div class="card-buttons">
+                <button style="font-family: Comic Sans MS;">VIEW</button>
+                <button style="font-family: Comic Sans MS;">SUBSCRIBE</button>
+            </div>
+        </div>
+        <div class="card">
+            <h2>Low carb diets</h2>
+            <p>Card content goes here.</p>
+            <div class="card-buttons">
+                <button style="font-family: Comic Sans MS;">VIEW</button>
+                <button style="font-family: Comic Sans MS;">SUBSCRIBE</button>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>
