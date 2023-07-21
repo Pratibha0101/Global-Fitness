@@ -8,7 +8,8 @@ I have created this website named - Global Fitness and as name suggests this is 
 - DataBase - MySQL
 - Java Framework - SpringBoot.
 - Web Development - HTML, CSS, JavaScript, Bootstrap.
--  Tool to upload - GitHub  
+-  Tool to upload - GitHub
+-  Thymeleaf
 
 
 Here you will get-     
